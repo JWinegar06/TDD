@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>JavaScript TDD Practice</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>JavaScript TDD Practice</h1>
+    <p>
+      Interactive examples built from functions tested with Vitest.
+    </p>
+  </header>
+
+  <main>
+    <!-- Example 1: Calculator -->
+    <section class="card">
+      <h2>1. Addition Function</h2>
+
+      <label for="first-number">First number</label>
+      <input id="first-number" type="number" step="any">
+
+      <label for="second-number">Second number</label>
+      <input id="second-number" type="number" step="any">
+
+      <button id="add-button" type="button">
+        Add Numbers
+      </button>
+
+      <p
+        id="calculator-result"
+        class="result"
+        aria-live="polite"
+      ></p>
+    </section>
+
+    <!-- Example 2: Password Validator -->
+    <section class="card">
+      <h2>2. Password Validator</h2>
+
+      <p class="requirements">
+        The password must contain at least eight characters,
+        one uppercase letter, and one number.
+      </p>
+
+      <label for="password">Password</label>
+      <input id="password" type="password">
+
+      <button id="password-button" type="button">
+        Validate Password
+      </button>
+
+      <p
+        id="password-result"
+        class="result"
+        aria-live="polite"
+      ></p>
+    </section>
+
+    <!-- Example 3: Shopping Cart -->
+    <section class="card">
+      <h2>3. Shopping-Cart Total</h2>
+
+      <label for="item-name">Item name</label>
+      <input id="item-name" type="text">
+
+      <label for="item-price">Price</label>
+      <input
+        id="item-price"
+        type="number"
+        min="0"
+        step="0.01"
+      >
+
+      <label for="item-quantity">Quantity</label>
+      <input
+        id="item-quantity"
+        type="number"
+        min="1"
+        step="1"
+        value="1"
+      >
+
+      <button id="add-item-button" type="button">
+        Add Item
+      </button>
+
+      <ul id="cart-items"></ul>
+
+      <p class="cart-total">
+        Total:
+        <strong id="cart-total">$0.00</strong>
+      </p>
+
+      <p
+        id="cart-message"
+        class="result"
+        aria-live="polite"
+      ></p>
+    </section>
+
+    <!-- Example 4: Username Formatter -->
+    <section class="card">
+      <h2>4. Username Formatter</h2>
+
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        placeholder="Example: Alex Smith"
+      >
+
+      <button id="format-button" type="button">
+        Format Username
+      </button>
+
+      <p
+        id="username-result"
+        class="result"
+        aria-live="polite"
+      ></p>
+    </section>
+
+    <!-- Example 5: Username Registration -->
+    <section class="card">
+      <h2>5. Username Registration</h2>
+
+      <p class="requirements">
+        Try registering a username. The demo remembers registered
+        usernames until the page is refreshed.
+      </p>
+
+      <label for="registration-username">Username</label>
+      <input
+        id="registration-username"
+        type="text"
+        placeholder="Enter a username"
+      >
+
+      <button id="register-button" type="button">
+        Register Username
+      </button>
+
+      <p
+        id="registration-result"
+        class="result"
+        aria-live="polite"
+      ></p>
+
+      <h3>Registered Users</h3>
+      <ul id="registered-users"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="/ui.js"></script>
+</body>
+</html>
