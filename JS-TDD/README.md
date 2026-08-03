@@ -100,13 +100,15 @@ npm run test:watch
 
 ## What is TDD?
 
-Test-Driven Development (TDD) is a software development method where tests are written before the code.
+Test-Driven Development (TDD) is a software development process where tests are written before the final program code. The basic cycle is called Red → Green → Refactor.
 
-The process follows three steps:
+Red: Write a test for the behavior you want. The test should fail because the feature has not been created yet.
+Green: Write the smallest amount of code needed to make the test pass.
+Refactor: Improve the code while keeping all tests passing.
 
-1. **Red** – Write a failing test.
-2. **Green** – Write the smallest amount of code needed to pass the test.
-3. **Refactor** – Improve the code while keeping all tests passing.
+For example, if I want a function that determines whether a number is even, I would first write a test saying that isEven(4) should return true. The test initially fails because isEven() does not exist. I then create the function, make the test pass, and improve the code if necessary.
+
+TDD helps developers catch bugs earlier, clearly define expected behavior, safely change existing code, and keep a permanent record of how different parts of the program are supposed to work.
 
 ---
 
