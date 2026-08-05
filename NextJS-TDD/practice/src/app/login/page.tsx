@@ -3,20 +3,17 @@
 import { useRouter } from "next/navigation";
 
 import LoginForm from "@/components/LoginForm";
-import { loginUser } from "@/services/authService";
 import { useAuth } from "@/context/AuthContext";
+import { loginUser } from "@/services/authService";
 
 export default function LoginPage() {
   const router = useRouter();
   const auth = useAuth();
 
   async function login(credentials: { email: string; password: string }) {
-    await loginUser(credentials);
+    const result = await loginUser(credentials);
 
-    auth.login({
-      name: "Student",
-      email: credentials.email,
-    });
+    auth.login(result.user);
 
     router.push("/dashboard");
   }
