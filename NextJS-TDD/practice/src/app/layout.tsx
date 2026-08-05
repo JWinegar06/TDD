@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { AuthProvider } from "@/context/AuthContext";
 
-//import "./globals.css";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Next.js TDD App",
