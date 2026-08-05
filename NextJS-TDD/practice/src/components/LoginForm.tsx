@@ -46,7 +46,7 @@ export default function LoginForm({ login = async () => {} }: LoginFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} noValidate>
       <h1>Login</h1>
 
       <div>
